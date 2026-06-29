@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # which prevents us from installing Node modules in *public* GitHub
 # repositories. Remove it crudely. See also
 # https://github.com/actions/checkout/issues/162#issuecomment-591198381
-RUN sed -i '/extraheader = AUTHORIZATION/d' .git/config
+RUN sed -i '/extraheader = AUTHORIZATION/d' .git/config || true
 
 # Add CSS so that `note` questions with `appearance` set to `kobo-disclaimer`
 # appear in a special footer on every page of the form. See
