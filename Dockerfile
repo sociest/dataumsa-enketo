@@ -56,6 +56,9 @@ RUN node -e " \
 RUN rm -rf node_modules/enketo-literacy-test-widget/node_modules \
            node_modules/enketo-image-customization-widget/node_modules
 
+COPY webform.pug packages/enketo-express/app/views/surveys/webform.pug
+COPY _enketo-power.pug packages/enketo-express/app/views/surveys/component/_enketo-power.pug
+
 RUN yarn workspace enketo-express run build \
     && yarn cache clean
 
