@@ -1,0 +1,6 @@
+// If you're considering changing this, be careful not to violate licence terms.
+.enketo-power
+  unless clientConfig.hidePoweredBy
+    span(data-i18n='enketo.power')= t('enketo.power')
+    a(href="https://dataumsa.sociest.org", title="dataumsa.sociest.org website")
+      img(src="https://i.postimg.cc/0yvKv7nz/logo-dataumsa.png", alt="DATAUMSA logo")
